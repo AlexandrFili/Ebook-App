@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ebook: Index</title>
+<title>Главная страница</title>
 <%@include file="all_component/allCSS.jsp"%>
 <style type="text/css">
 .back-img {

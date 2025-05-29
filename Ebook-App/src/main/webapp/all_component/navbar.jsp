@@ -21,7 +21,8 @@
 		</div>
 
 		<div class="col-md-3">
-			<a href="" class="btn btn-success">Вход</a> <a href=""
+			<a href="" class="btn btn-success">Вход</a> 
+			<a href="register.jsp"
 				class="btn btn-primary">Регистрация</a>
 		</div>
 
