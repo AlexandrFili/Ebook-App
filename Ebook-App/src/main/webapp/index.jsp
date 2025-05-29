@@ -25,6 +25,12 @@
 	<%@include file="all_component/navbar.jsp"%>
 	<div class="container-fluid back-img"></div>
 
+<%@ page import="java.sql.Connection" %>
+<%@ page import="com.DB.DBConnect" %>
+	<% Connection conn=DBConnect.getConn(); 
+	out.println(conn);
+	%>
+
 	<!-- Начало раздела со Свежими книгами -->
 
 	<div class="container">
