@@ -4,7 +4,7 @@
 <div class="container-fluid"
 	style="height: 10px; background-color: #ab47bc;"></div>
 
-<div class="container-fluid p-3 bg-light">
+<div class="container-fluid p-3" style="background-color: #f3e5f5;">
 	<div class="row">
 		<div class="col-md-3 text-success">
 			<h3>
@@ -21,9 +21,9 @@
 		</div>
 
 		<div class="col-md-3">
-			<a href="" class="btn btn-success">Вход</a> 
+			<a href="login.jsp" class="btn btn-success"><i class="fa-solid fa-right-to-bracket"></i> Вход</a> 
 			<a href="register.jsp"
-				class="btn btn-primary">Регистрация</a>
+				class="btn btn-primary"><i class="fa-solid fa-user"></i> Регистрация</a>
 		</div>
 
 	</div>

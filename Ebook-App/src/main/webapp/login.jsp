@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Регистрация</title>
+<title>Вход</title>
 <%@include file="all_component/allCSS.jsp"%>
 </head>
 <body style="background-color: #f3e5f5">
@@ -14,31 +14,24 @@
 			<div class="col-md-4 offset-md-4">
 				<div class="card">
 					<div class="card-body">
-						<h2 class="text-center">Регистрация</h2>
+						<h2 class="text-center">Вход</h2>
 						<form>
-							<div class="form-group">
-								<label for="exampleInputEmail1">Введите имя</label> <input
-									type="text" class="form-control" id="exampleInputName1"
-									required="required">
-							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Введите почту</label> <input
 									type="email" class="form-control" id="exampleInputEmail1"
-									required="required">
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1">Введите номер телефона</label> <input
-									type="number" class="form-control" id="exampleInputPhone1"
-									required="required">
+									aria-describedby="emailHelp" required="required">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Введите пароль</label> <input
 									type="password" class="form-control" id="exampleInputPassword1"
 									required="required">
 							</div>
+
 							<div class="text-center">
-								<button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+								<button type="submit" class="btn btn-primary">Войти</button>
+								<br> <a href="register.jsp">Создать аккаунт</a>
 							</div>
+
 						</form>
 
 					</div>
@@ -47,6 +40,4 @@
 		</div>
 	</div>
 </body>
-
-<%@include file="all_component/footer.jsp"%>
 </html>

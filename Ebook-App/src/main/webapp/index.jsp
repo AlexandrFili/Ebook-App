@@ -10,7 +10,7 @@
 .back-img {
 	background: url("img/b.jpg");
 	height: 8vh;
-	width: 110%;
+	width: 100%;
 	background-size: cover;
 	background-repeat: no repeat;
 }
@@ -316,7 +316,7 @@
 
 	</div>
 
-	<div class="text-center mt-2">
+	<div class="text-center mt-2" style="padding-bottom: 64px;">
 		<a herf="" class="btn btn-danger btn-sm text-white">Смотреть все</a>
 	</div>
 
@@ -325,4 +325,5 @@
 <%@include file="all_component/footer.jsp" %>
 
 </body>
+
 </html>

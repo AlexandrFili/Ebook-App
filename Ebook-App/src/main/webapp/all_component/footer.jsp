@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
- <div class="container-fluid text-center text-white p-3 mt-2" style="background-color: #ab47bc;">
- <h5>Верстку и дизайн выполнил студент группы ЦМИС-14м Филимонов Александр</h5>
- 
- </div>   
+<footer class="text-center text-white p-3 mt-2"
+        style="background:#ab47bc; position:fixed; bottom:0; left:0; width:100%;">
+    <h5 class="mb-0">
+        Верстку и дизайн выполнил студент группы ЦМИС-14м Филимонов Александр
+    </h5>
+</footer>  
     
