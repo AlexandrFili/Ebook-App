@@ -5,9 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Регистрация</title>
-<%@include file="allCSS.jsp"%>
+<%@include file="all_component/allCSS.jsp"%>
+
 </head>
 <body>
-<%@include file="navbar.jsp"%>
+<%@include file="all_component/navbar.jsp"%>
 </body>
 </html>
