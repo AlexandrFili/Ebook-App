@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,16 +17,24 @@
 				<div class="card">
 					<div class="card-body">
 						<h2 class="text-center">Вход</h2>
-						<form>
+
+						<c:if test="${not empty failedMsg}">
+							<h5 class="text-center text-danger">${failedMsg }</h5>
+							<c:remove var="failedMsg" scope="session" />
+						</c:if>
+
+						
+
+						<form action="login" method="post">
 							<div class="form-group">
 								<label for="exampleInputEmail1">Введите почту</label> <input
 									type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" required="required">
+									aria-describedby="emailHelp" required="required" name="email">
 							</div>
 							<div class="form-group">
 								<label for="exampleInputEmail1">Введите пароль</label> <input
 									type="password" class="form-control" id="exampleInputPassword1"
-									required="required">
+									required="required" name="password">
 							</div>
 
 							<div class="text-center">
