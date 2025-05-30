@@ -20,9 +20,10 @@
 		</div>
 
 		<div class="col-md-3">
-			<a href="login.jsp" class="btn btn-success"><i class="fa-solid fa-right-to-bracket"></i> Вход</a> 
-			<a href="register.jsp"
-				class="btn btn-primary"><i class="fa-solid fa-user"></i> Регистрация</a>
+			<a href="login.jsp" class="btn btn-success"><i
+				class="fa-solid fa-right-to-bracket"></i> Вход</a> <a
+				href="register.jsp" class="btn btn-primary"><i
+				class="fa-solid fa-user"></i> Регистрация</a>
 		</div>
 
 	</div>
@@ -33,7 +34,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-	<a class="navbar-brand" href="#"><i class="fa-solid fa-book"></i></a>
+	<a class="navbar-brand" href="#"><i class="fa-solid fa-landmark"></i></a>
 
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#navbarSupportedContent"
@@ -44,24 +45,9 @@
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item active"><a class="nav-link" href="#"><i
-					class="fa-solid fa-house"></i> Главная страница <span
+			<li class="nav-item active"><a class="nav-link" href="home.jsp"><i
+					class="fa-solid fa-face-smile"></i> Администраторская <span
 					class="sr-only">(current)</span> </a></li>
-			<li class="nav-item active"><a class="nav-link" href="#"><i
-					class="fa-solid fa-book-open"></i> Свежие книги</a></li>
-			<li class="nav-item active"><a class="nav-link" href="#"><i
-					class="fa-solid fa-book-medical"></i> Новые книги</a></li>
-			<li class="nav-item active"><a class="nav-link disabled"><i
-					class="fa-solid fa-book-open-reader"></i> Прочитанные книги</a></li>
-		</ul>
-		<form class="form-inline my-2 my-lg-0">
-			<button class="btn btn-light my-2 my-sm-0" type="submit">
-				<i class="fa-solid fa-gear"></i> Настройки
-			</button>
-			<button class="btn btn-light my-2 my-sm-0 ml-1" type="submit">
-				<i class="fa-solid fa-square-phone"></i> Контакты
-			</button>
-
-		</form>
+			</form>
 	</div>
 </nav>
