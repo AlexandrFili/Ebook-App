@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@ page import="com.DAO.BookDAOImpl" %>
+<%@ page import="com.DB.DBConnect" %>
+<%@ page import="com.entity.BookDtls" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +20,7 @@
 		<thead style="background-color: grey; color: white;">
 			<tr>
 				<th scope="col">ID</th>
+				<th scope="col">Обложка</th>
 				<th scope="col">Название книги</th>
 				<th scope="col">Автор</th>
 				<th scope="col">Цена</th>
@@ -25,44 +31,29 @@
 			</tr>
 		</thead>
 		<tbody>
+			<%
+			BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
+			List<BookDtls> list = dao.getAllBooks();
+			for (BookDtls b : list) {
+			%>
 			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-				<td>
-				<a href="#" class="btn btn-sm btn-primary">Изменить</a>
-				<a href="#" class="btn btn-sm btn-danger">Удалить</a>
-				</td>
+				<td><%=b.getBookId()%></td>
+				<td><img src="../book/<%=b.getPhotoName()%>"
+					style="width: 60px; height: 100px"></td>
+				<td><%=b.getBookName()%></td>
+				<td><%=b.getAuthor()%></td>
+				<td><%=b.getPrice()%></td>
+				<td><%=b.getBookCategory()%></td>
+				<td><%=b.getStatus()%></td>
+				<td><a href="#" class="btn btn-sm btn-primary">Изменить</a> <a
+					href="#" class="btn btn-sm btn-danger">Удалить</a></td>
 			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td>@fat</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-				<td>
-				<a href="#" class="btn btn-sm btn-primary">Изменить</a>
-				<a href="#" class="btn btn-sm btn-danger">Удалить</a>
-				</td>
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td>Larry</td>
-				<td>the Bird</td>
-				<td>@twitter</td>
-				<td>Otto</td>
-				<td>@mdo</td>
-				<td>
-				<a href="#" class="btn btn-sm btn-primary">Изменить</a>
-				<a href="#" class="btn btn-sm btn-danger">Удалить</a>
-				</td>
-			</tr>
+			<%
+			}
+			%>
+
 		</tbody>
 	</table>
 </body>
-		<%@include file="footer.jsp"%>
+<%@include file="footer.jsp"%>
 </html>
