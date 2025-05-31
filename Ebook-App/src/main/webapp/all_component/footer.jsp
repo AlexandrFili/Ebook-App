@@ -2,9 +2,8 @@
     pageEncoding="UTF-8"%>
 
 <footer class="text-center text-white p-3 mt-2"
-        style="background:#ab47bc; position:fixed; bottom:0; left:0; width:100%;">
+        style="background:#ab47bc;">
     <h5 class="mb-0">
         Верстку и дизайн выполнил студент группы ЦМИС-14м Филимонов Александр
     </h5>
-</footer>  
-    
+</footer>

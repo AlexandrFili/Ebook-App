@@ -23,7 +23,8 @@
 </style>
 
 </head>
-<body style="background-color: #f3e5f5;">
+<body style="background-color: #f3e5f5; display: flex; flex-direction: column; min-height: 100vh;">
+
 	<%@include file="all_component/navbar.jsp"%>
 	<div class="container-fluid">
 		<div class="row p-3">
@@ -63,5 +64,7 @@
 
 		</div>
 	</div>
+	
+		<%@include file="all_component/footer.jsp"%>
 </body>
 </html>

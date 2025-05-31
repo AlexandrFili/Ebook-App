@@ -61,7 +61,7 @@
 						<p />
 						<div class="row">
 							<a href="" class="bt btn-danger btn-sm ml-4">Добавить в <i
-								class="fa-solid fa-cart-shopping"></i></a> <a href=""
+								class="fa-solid fa-cart-shopping"></i></a> <a href="view_book.jsp?bid=<%=b.getBookId() %>"
 								class="bt btn-success btn-sm ml-1"><i
 								class="fa-solid fa-eye"></i></a> <a href=""
 								class="bt btn-danger btn-sm ml-1"><%=b.getPrice()%> <i
@@ -116,7 +116,7 @@
 						<div class="row">
 							Категория:
 							<%=b.getBookCategory()%>
-							<a href="" class="bt btn-success btn-sm ml-1"><i
+							<a href="view_book.jsp?bid=<%=b.getBookId() %>" class="bt btn-success btn-sm ml-1"><i
 								class="fa-solid fa-eye"></i></a> <a href=""
 								class="bt btn-danger btn-sm ml-1"><%=b.getPrice()%> <i
 								class="fa-solid fa-ruble-sign"></i></a>
@@ -129,7 +129,7 @@
 						<p />
 						<div class="row">
 							<a href="" class="bt btn-danger btn-sm ml-4">Добавить в <i
-								class="fa-solid fa-cart-shopping"></i></a> <a href=""
+								class="fa-solid fa-cart-shopping"></i></a> <a href="view_book.jsp?bid=<%=b.getBookId() %>"
 								class="bt btn-success btn-sm ml-1"><i
 								class="fa-solid fa-eye"></i></a> <a href=""
 								class="bt btn-danger btn-sm ml-1"><%=b.getPrice()%> <i
@@ -183,7 +183,7 @@
 						<p><%=b.getBookCategory()%></p>
 						
 						<div class="row">
-							<a href=""
+							<a href="view_book.jsp?bid=<%=b.getBookId() %>"
 								class="bt btn-success btn-sm ml-5"><i
 								class="fa-solid fa-eye"></i></a> <a href=""
 								class="bt btn-danger btn-sm ml-1"><%=b.getPrice()%> <i
@@ -204,7 +204,7 @@
 
 	</div>
 
-	<div class="text-center mt-2" style="padding-bottom: 64px;">
+	<div class="text-center mt-2">
 		<a href="all_old_book.jsp" class="btn btn-danger btn-sm text-white">Смотреть все</a>
 	</div>
 

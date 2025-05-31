@@ -58,13 +58,13 @@
 									<%
 									if ("Active".equals(b.getStatus())) {
 									%>
-									<option value="Active">В наличии</option>		
-									<option value="Inactive">Нет в наличии</option>						
+									<option value="В наличии">В наличии</option>		
+									<option value="Нет в наличии">Нет в наличии</option>						
 									<%
 									} else {
 									%>
-									<option value="Inactive">Нет в наличии</option>
-									<option value="Active">В наличии</option>	
+									<option value="Нет в наличии">Нет в наличии</option>
+									<option value="в наличии">В наличии</option>	
 									<%
 									}
 									%>
