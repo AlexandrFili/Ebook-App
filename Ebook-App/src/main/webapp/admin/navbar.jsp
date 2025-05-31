@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page isELIgnored="false"%>
 
 <div class="container-fluid"
 	style="height: 10px; background-color: #ab47bc;"></div>
@@ -11,27 +13,60 @@
 				<i class="fa-solid fa-book"></i> Книжный магазин
 			</h3>
 		</div>
-		<div class="col-md-6">
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search">
-				<button class="btn btn-primary my-2 my-sm-0" type="submit">Поиск</button>
-			</form>
-		</div>
-
 		<div class="col-md-3">
-			<a href="login.jsp" class="btn btn-success"><i
-				class="fa-solid fa-right-to-bracket"></i> Вход</a> <a
-				href="register.jsp" class="btn btn-primary"><i
-				class="fa-solid fa-user"></i> Регистрация</a>
+			<c:if test="${not empty userobj}">
+				<a class="btn btn-success text-white"><i
+					class="fa-solid fa-right-to-bracket"></i> ${userobj.name}</a>
+				<a data-toggle="modal" data-target="#staticBackdrop"
+					class="btn btn-primary"><i class="fa-solid fa-right-to-bracket"></i>
+					Выйти</a>
+			</c:if>
+
+			<c:if test="${empty userobj}">
+				<a href="../login.jsp" class="btn btn-success"><i
+					class="fa-solid fa-right-to-bracket"></i> Вход</a>
+				<a href="../register.jsp" class="btn btn-primary"><i
+					class="fa-solid fa-user"></i> Регистрация</a>
+			</c:if>
+
 		</div>
 
 	</div>
 
 </div>
 
+<!-- logout модуль -->
 
+<!-- Vertically centered modal -->
 
+<!-- Modal -->
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static"
+	data-keyboard="false" tabindex="-1"
+	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel"></h5>
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<h4>Ты хочешь выйти?</h4>
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Закрыть</button>
+					<a href="../logout" type="button" class="btn btn-primary text-white">Выйти</a>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+
+<!-- конец logout модуль -->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
 	<a class="navbar-brand" href="#"><i class="fa-solid fa-landmark"></i></a>

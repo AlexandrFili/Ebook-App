@@ -16,6 +16,11 @@
 </head>
 <body style="background-color: #f3e5f5;">
 	<%@include file="navbar.jsp"%>
+	
+	<c:if test="${empty userobj}">
+		<c:redirect url="../login.jsp"/>
+	</c:if>
+	
 	<h3 class="text-center">Все книги</h3>
 
 	<c:if test="${not empty succMsg}">
@@ -58,8 +63,8 @@
 				<td><%=b.getBookCategory()%></td>
 				<td><%=b.getStatus()%></td>
 				<td><a href="edit_books.jsp?id=<%=b.getBookId()%>"
-					class="btn btn-sm btn-primary">Изменить</a> 
-					<a href="../delete?id=<%=b.getBookId() %>" class="btn btn-sm btn-danger">Удалить</a></td>
+					class="btn btn-sm btn-primary"><i class="fa-solid fa-pen-to-square"></i> Изменить</a> 
+					<a href="../delete?id=<%=b.getBookId() %>" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i> Удалить</a></td>
 			</tr>
 			<%
 			}
