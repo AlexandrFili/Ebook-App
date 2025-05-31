@@ -36,7 +36,7 @@ public class EditBooksServlet extends HttpServlet {
 			b.setBookName(bookName);
 			b.setAuthor(author);
 			b.setPrice(price);
-			b.setStatus(author);
+			b.setStatus(status);
 			
 			BookDAOImpl dao=new BookDAOImpl(DBConnect.getConn());
 			boolean f=dao.updateEditBooks(b);

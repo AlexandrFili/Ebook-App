@@ -48,11 +48,11 @@
 					class="fa-solid fa-house"></i> Главная страница <span
 					class="sr-only">(current)</span> </a></li>
 			<li class="nav-item active"><a class="nav-link" href="#"><i
-					class="fa-solid fa-book-open"></i> Свежие книги</a></li>
+					class="fa-solid fa-book-open"></i> Книги в наличии</a></li>
 			<li class="nav-item active"><a class="nav-link" href="#"><i
 					class="fa-solid fa-book-medical"></i> Новые книги</a></li>
 			<li class="nav-item active"><a class="nav-link disabled"><i
-					class="fa-solid fa-book-open-reader"></i> Прочитанные книги</a></li>
+					class="fa-solid fa-book-open-reader"></i> Б/У книги</a></li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0">
 			<button class="btn btn-light my-2 my-sm-0" type="submit">

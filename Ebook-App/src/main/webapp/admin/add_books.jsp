@@ -56,7 +56,7 @@
 								<label for="inputState">Категория книги</label> <select
 									id="inputState" name="categories" class="form-control">
 									<option selected>--выбрать--</option>
-									<option value="New">Новая книга</option>
+									<option value="Новое">Новая книга</option>
 								</select>
 							</div>
 
@@ -64,8 +64,8 @@
 								<label for="inputState">Статус книги</label> <select
 									id="inputState" name="bstatus" class="form-control">
 									<option selected>--выбрать--</option>
-									<option value="Active">В наличии</option>
-									<option value="Inactive">Нет в наличии</option>
+									<option value="В наличии">В наличии</option>
+									<option value="Нет в наличии">Нет в наличии</option>
 								</select>
 							</div>
 
