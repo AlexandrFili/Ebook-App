@@ -81,7 +81,7 @@
 	</div>
 
 	<div class="text-center mt-2">
-		<a herf="" class="btn btn-danger btn-sm text-white">Смотреть все</a>
+		<a href="all_recent_book.jsp" class="btn btn-danger btn-sm text-white">Смотреть все</a>
 	</div>
 
 	<!-- Конец раздела со Свежими книгами -->
@@ -148,17 +148,12 @@
 			%>
 
 
-
-
-
-
-
 		</div>
 
 	</div>
 
 	<div class="text-center mt-2">
-		<a herf="" class="btn btn-danger btn-sm text-white">Смотреть все</a>
+		<a href="all_new_book.jsp" class="btn btn-danger btn-sm text-white">Смотреть все</a>
 	</div>
 
 	<!-- Конец раздела с Новыми книгами -->
@@ -210,7 +205,7 @@
 	</div>
 
 	<div class="text-center mt-2" style="padding-bottom: 64px;">
-		<a herf="" class="btn btn-danger btn-sm text-white">Смотреть все</a>
+		<a href="all_old_book.jsp" class="btn btn-danger btn-sm text-white">Смотреть все</a>
 	</div>
 
 	<!-- Конец раздела с Б/У книгами -->

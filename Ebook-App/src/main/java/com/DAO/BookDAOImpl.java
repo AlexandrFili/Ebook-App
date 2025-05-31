@@ -254,6 +254,100 @@ public class BookDAOImpl implements BookDAO {
 
 		return list;
 	}
+
+	@Override
+	public List<BookDtls> getAllRecentBooks() {
+		List<BookDtls> list = new ArrayList<BookDtls>();
+		BookDtls b = null;
+		try {
+			String sql = "select * from book_dtls where status=? order by bookId DESC";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, "В наличии");
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				b = new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookName(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				list.add(b);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return list;
+	}
+
+	@Override
+	public List<BookDtls> getAllNewBooks() {
+
+		List<BookDtls> list = new ArrayList<BookDtls>();
+		BookDtls b = null;
+		try {
+			String sql = "select * from book_dtls where bookCategory=? and status=? order by bookId DESC";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, "Новое");
+			ps.setString(2, "В наличии");
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				b = new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookName(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				list.add(b);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return list;
+		
+		
+	}
+
+	@Override
+	public List<BookDtls> getAllOldBooks() {
+
+		List<BookDtls> list = new ArrayList<BookDtls>();
+		BookDtls b = null;
+		try {
+			String sql = "select * from book_dtls where bookCategory=? and status=? order by bookId DESC";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, "Б/У");
+			ps.setString(2, "В наличии");
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				b = new BookDtls();
+				b.setBookId(rs.getInt(1));
+				b.setBookName(rs.getString(2));
+				b.setAuthor(rs.getString(3));
+				b.setPrice(rs.getString(4));
+				b.setBookCategory(rs.getString(5));
+				b.setStatus(rs.getString(6));
+				b.setPhotoName(rs.getString(7));
+				b.setEmail(rs.getString(8));
+				list.add(b);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return list;
+	}
 	
 	
 
