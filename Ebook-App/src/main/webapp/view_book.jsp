@@ -13,32 +13,32 @@
 </head>
 <body style="background-color: #f3e5f5;">
 	<%@include file="all_component/navbar.jsp"%>
-	
+
 	<%
-	int bid=Integer.parseInt(request.getParameter("bid"));
-	BookDAOImpl dao=new BookDAOImpl(DBConnect.getConn());
-	BookDtls b=dao.getBookById(bid);
-	
-	%>	
-	
+	int bid = Integer.parseInt(request.getParameter("bid"));
+	BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
+	BookDtls b = dao.getBookById(bid);
+	%>
+
 	<div class="container p-3">
 		<div class="row p-5">
 			<div class="col-md-6 text-center p-5 border bg-white">
-				<img src="book/<%=b.getPhotoName() %>" style="height: 350px; width: 250px"><br>
+				<img src="book/<%=b.getPhotoName()%>"
+					style="height: 350px; width: 250px"><br>
 				<h3 class="mt-3">
-					Название книги: <span class="text-success"><%=b.getBookName() %></span>
+					Название книги: <span class="text-success"><%=b.getBookName()%></span>
 				</h3>
 				<h3>
-					Автор: <span class="text-success"><%=b.getAuthor() %></span>
+					Автор: <span class="text-success"><%=b.getAuthor()%></span>
 				</h3>
 				<h3>
-					Категория: <span class="text-success"><%=b.getBookCategory() %></span>
+					Категория: <span class="text-success"><%=b.getBookCategory()%></span>
 				</h3>
 			</div>
 
 
 			<div class="col-md-6 text-center p-5 border bg-white">
-				<h1><%=b.getBookName() %></h1>
+				<h1><%=b.getBookName()%></h1>
 				<div class="row mt-2">
 					<div class="col-md-4 text-danger text-center p-2">
 						<i class="fa-solid fa-money-check-dollar fa-3x"></i>
@@ -54,6 +54,20 @@
 					</div>
 				</div>
 
+				<%
+				if ("Б/У".equals(b.getBookCategory())) {
+				%>
+
+				<div class="text-center">
+					<a href="index.jsp" class="btn btn-success">Продолжить покупки <i
+						class="fa-solid fa-cart-shopping"></i></a> <a href=""
+						class="btn btn-danger">200 <i class="fa-solid fa-ruble-sign"></i></a>
+
+				</div>
+
+				<%
+				} else {
+				%>
 				<div class="text-center">
 					<a href="" class="btn btn-primary">Добавить в корзину <i
 						class="fa-solid fa-cart-shopping"></i></a> <a href=""
@@ -61,8 +75,11 @@
 
 				</div>
 
-			</div>
+				<%
+				}
+				%>
 
+			</div>
 		</div>
 	</div>
 

@@ -9,11 +9,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-	<h1>Пользователь: Домашняя страница</h1>
+<body style="background-color: #f3e5f5;">
+<%@include file="index.jsp"%>
+
 	<c:if test="${not empty userobj}">
-		<h1>Имя:${userobj.name}</h1>
-		<h1>Email:${userobj.email}</h1>
+		<h5>Имя: ${userobj.name}</h5>
+		<h5>Email: ${userobj.email}</h5>
 	</c:if>
+
 </body>
 </html>
